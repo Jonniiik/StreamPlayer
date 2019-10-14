@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AudioStream</string>
+    <string name="radio">Radio</string>
+    <string name="music">Music</string>
+    <string name="video">Video</string>
+    <string name="setting">Setting</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_song">Name Song</string>
+    <string name="name_artist">Name Artist</string>
+</resources>

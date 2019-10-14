@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MusicFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/mainMusicPlayerColor">
+
+        <ImageView
+            android:id="@+id/imageViewImageAlbumInPlayer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/textViewNameSongsInPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/imageViewImageAlbumInPlayer"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textViewNameGroupInPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/imageViewImageAlbumInPlayer"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutInPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewImageAlbumInPlayer"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonLastTrack"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_last_track" />
+
+                <Button
+                    android:id="@+id/buttonPlay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_play" />
+
+                <Button
+                    android:id="@+id/buttonNextTrack"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_next_track" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekBarSounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progressBackgroundTint="#FFFFFF"
+                android:progressTint="@color/colorPrimary"
+                android:thumb="@color/colorPrimary"
+                android:thumbTint="@android:color/transparent"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewSongs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutPlayer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewListSounds"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchViewSongs"
+        android:paddingTop="2dp" />
+
+</RelativeLayout>
